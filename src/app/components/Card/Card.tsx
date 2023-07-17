@@ -1,5 +1,4 @@
-import { Character } from '@/app/characters/models'
-import {Location} from '@/app/locations/models'//esta importacion afecta el lazyloading
+
 import React from 'react'
 import "./Card.css"
 import Image from 'next/image'
