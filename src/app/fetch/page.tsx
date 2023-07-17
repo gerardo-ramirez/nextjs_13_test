@@ -2,7 +2,20 @@
 import Image from 'next/image'
 import React,{useEffect} from 'react'
 import TagManager from 'react-gtm-module';
-
+export type Personaje= {
+    id: number
+    name: string
+    status: string
+    species: string
+    type: string
+    gender: string
+    origin: any
+    location: Location
+    image: string
+    episode: string[]
+    url: string
+    created: string
+}
 
 async function getData() {
    
@@ -24,7 +37,7 @@ async function getData() {
   return (
     <div><h3>Personajes</h3>
          
-          {results && results.map(personaje => {
+          {results && results.map((personaje: Personaje) => {
                TagManager.dataLayer({
                   dataLayer: {
                       event: "render",
